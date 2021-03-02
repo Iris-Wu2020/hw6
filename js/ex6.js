@@ -15,12 +15,6 @@ const words = [{
   }];
   console.log(words[0].term);
 
-
-//console.log(document.createElement("dt").textContent = "prodfdf");
-//   const dtNewNode2 = document.createElement("dt");
-//   const dtNewNode3 = document.createElement("dt");
-
-
   
   const buildNewNodeDt = (word) => {
     const dtNewNode = document.createElement("dt");
@@ -34,8 +28,7 @@ const words = [{
     return dtNewNode;
   };
 
-  
-//console.log(buildNewNode("hhhhh"));
+
 console.log(words.map(word => buildNewNodeDt(word.term)));
 console.log(words.map(word => buildNewNodeDd(word.definition)));
     
