@@ -16,19 +16,15 @@ const words = [{
   console.log(words[0].term);
 
   
-  const buildNewNodeDt = (word) => {
-    const dtNewNode = document.createElement("dt");
-    dtNewNode.textContent = word;
-    return dtNewNode;
+  const buildNewNodeDt = (word1, word2) => {
+    const dtNewNode1 = document.createElement("dt");
+    dtNewNode1.textContent = word1;
+    const dtNewNode2 = document.createElement("dd");
+    dtNewNode2.textContent = word2;
+    return dtNewNode1;
   };
 
-  const buildNewNodeDd = (word) => {
-    const dtNewNode = document.createElement("dd");
-    dtNewNode.textContent = word;
-    return dtNewNode;
-  };
+console.log(buildNewNodeDt("dddd", "uuuu"));
 
-
-console.log(words.map(word => buildNewNodeDt(word.term)));
-console.log(words.map(word => buildNewNodeDd(word.definition)));
+//console.log(words.map(word => buildNewNodeDt(word.term, word.definition))[0]);
     
