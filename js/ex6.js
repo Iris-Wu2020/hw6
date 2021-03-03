@@ -13,18 +13,19 @@ const words = [{
     term: "Oxymoron",
     definition: "figure of speech that juxtaposes elements that appear to be contradictory"
   }];
-  console.log(words[0].term);
 
-  
-  const buildNewNodeDt = (word1, word2) => {
-    const dtNewNode1 = document.createElement("dt");
-    dtNewNode1.textContent = word1;
-    const dtNewNode2 = document.createElement("dd");
-    dtNewNode2.textContent = word2;
-    return dtNewNode1;
-  };
+const divElement = document.getElementById("content");
+words.forEach(buildNewNodeAndAppend);
+function buildNewNodeAndAppend(word) {
+    const termNode = document.createElement("dt");
+    const strongNode = document.createElement("strong");
+    const termNodeTxt = document.createTextNode(word.term);
+    termNode.appendChild(strongNode).appendChild(termNodeTxt);
+    divElement.appendChild(termNode);
 
-console.log(buildNewNodeDt("dddd", "uuuu"));
-
-//console.log(words.map(word => buildNewNodeDt(word.term, word.definition))[0]);
+    const defNode = document.createElement("dd");
+    const defNodeTxt = document.createTextNode(word.definition);
+    defNode.appendChild(defNodeTxt);
+    divElement.appendChild(defNode);
+}  
     
