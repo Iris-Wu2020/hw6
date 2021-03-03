@@ -16,7 +16,7 @@ const words = [{
 
 
 const divElement = document.getElementById("content");
-words.forEach( function (word) {
+words.forEach(word => {
     const termNode = document.createElement("dt");
     const strongNode = document.createElement("strong");
     const termNodeTxt = document.createTextNode(word.term);
