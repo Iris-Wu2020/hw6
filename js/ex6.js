@@ -14,9 +14,9 @@ const words = [{
     definition: "figure of speech that juxtaposes elements that appear to be contradictory"
   }];
 
+
 const divElement = document.getElementById("content");
-words.forEach(buildNewNodeAndAppend);
-function buildNewNodeAndAppend(word) {
+words.forEach( function (word) {
     const termNode = document.createElement("dt");
     const strongNode = document.createElement("strong");
     const termNodeTxt = document.createTextNode(word.term);
@@ -27,5 +27,5 @@ function buildNewNodeAndAppend(word) {
     const defNodeTxt = document.createTextNode(word.definition);
     defNode.appendChild(defNodeTxt);
     divElement.appendChild(defNode);
-}  
+});
     
